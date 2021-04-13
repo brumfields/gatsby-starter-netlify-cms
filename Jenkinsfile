@@ -4,7 +4,8 @@ pipeline {
         stage('Build') {
             steps {
                 nodejs (nodeJSInstallationName: 'node') {
-                    sh 'npm install'
+                    sh 'yarn'
+                    sh 'yarn build'
                 }
             }
         }
